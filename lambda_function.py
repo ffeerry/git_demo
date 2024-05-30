@@ -11,8 +11,8 @@ def lambda_handler(event, context):
         load_dotenv()
 
         conn = snowflake.connector.connect(
-            user=os.getenv('SNOWFLAKE_USERname'),
-            password=os.getenv('SNOWFLAKE_PASSWORD'),
+            user=os.getenv('SNOWFLAKE_USER_branch'),
+            password=os.getenv('SNOWFLAKE_PASSWORD_branch'),
             account=os.getenv('SNOWFLAKE_ACCOUNT'),
             warehouse=os.getenv('SNOWFLAKE_WAREHOUSE'),
             database=os.getenv('SNOWFLAKE_DATABASE'),
